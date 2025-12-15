@@ -90,6 +90,81 @@ This collection is part of a larger project to transcribe all exam papers into s
 - Topic classifications
 - Complete metadata
 
+### 📝 How to Transcribe Exam Papers
+
+The repository includes a comprehensive AI transcription system. See [`TRANSCRIPTION_PROMPT.md`](TRANSCRIPTION_PROMPT.md) for the complete prompt template.
+
+**Quick Start:**
+
+1. **Prepare the Prompt**
+   - Open [`TRANSCRIPTION_PROMPT.md`](TRANSCRIPTION_PROMPT.md)
+   - Replace `{{YEAR}}` with the target year (e.g., 2024)
+   - Replace `{{CURRENT_DATE}}` with today's date (e.g., 2024-12-15)
+
+2. **Collect Paper Images**
+   - Gather all PNG files from the year's subject folders
+   - Example: `2024/Biology/paper1/*.png`, `2024/Chemistry/paper1/*.png`, etc.
+
+3. **Use an AI Vision Model**
+   - Send the customized prompt with all images to GPT-4 Vision, Claude with vision, or similar
+   - The AI will analyze each page and extract all questions, marks, and diagrams
+
+4. **Save the Output**
+   - Save the generated JSON as `kcse_{{YEAR}}_complete.json`
+   - Validate against the schema in [`schema.json`](schema.json)
+
+5. **Validate the Output**
+   ```bash
+   python3 validate_transcription.py kcse_2024_complete.json
+   ```
+   
+   The validator checks:
+   - JSON schema compliance
+   - Structure and required fields
+   - Mark totals match
+   - Diagram descriptions are present
+   - Question counts are correct
+
+**Files:**
+- [`TRANSCRIPTION_PROMPT.md`](TRANSCRIPTION_PROMPT.md) - Complete AI prompt template
+- [`schema.json`](schema.json) - JSON Schema for validation
+- [`example_output.json`](example_output.json) - Example transcribed output
+- [`validate_transcription.py`](validate_transcription.py) - Python validator script
+- [`prepare_transcription.sh`](prepare_transcription.sh) - Helper script for preparing transcriptions
+- [`QUICK_REFERENCE.md`](QUICK_REFERENCE.md) - Quick start guide
+
+### 🎯 Output Structure
+
+Each transcription produces a comprehensive JSON file with:
+
+```json
+{
+  "year": 2024,
+  "totalSubjects": 8,
+  "totalPapers": 24,
+  "totalQuestions": 200,
+  "subjects": {
+    "Biology": {
+      "papers": {
+        "Paper 1": {
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "...",
+              "marks": 2,
+              "hasDiagram": true,
+              "diagram": { /* detailed diagram info */ }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+See [`example_output.json`](example_output.json) for a complete working example.
+
 ## ⚖️ Legal Notice
 
 These exam papers are copyrighted by the Kenya National Examinations Council (KNEC). This repository is for:
