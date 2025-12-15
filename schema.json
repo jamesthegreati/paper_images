@@ -179,7 +179,7 @@
         "part": {
           "type": "string",
           "description": "Sub-part identifier (i, ii, iii, etc.)",
-          "pattern": "^(i|ii|iii|iv|v|vi|vii|viii|ix|x)$"
+          "pattern": "^(i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv)$"
         },
         "text": {
           "type": "string",
