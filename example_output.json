@@ -1,0 +1,191 @@
+{
+  "year": 2024,
+  "generatedAt": "2024-12-15",
+  "totalSubjects": 2,
+  "totalPapers": 3,
+  "totalQuestions": 38,
+  "subjects": {
+    "Biology": {
+      "papers": {
+        "Paper 1": {
+          "totalPages": 13,
+          "totalQuestions": 30,
+          "totalMarks": 80,
+          "instructions": [
+            "Answer ALL questions in the spaces provided.",
+            "All working MUST be clearly shown where necessary.",
+            "Non-programmable silent electronic calculators and KNEC Mathematical tables may be used except where stated otherwise."
+          ],
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "State two functions of the cell membrane.",
+              "marks": 2,
+              "topic": "Cell Structure",
+              "pageNumber": 2,
+              "hasSubQuestions": false,
+              "subQuestions": null,
+              "hasDiagram": false,
+              "diagram": null
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Name the process by which plants lose water in form of vapour to the atmosphere.",
+              "marks": 1,
+              "topic": "Transport in Plants",
+              "pageNumber": 2,
+              "hasSubQuestions": false,
+              "subQuestions": null,
+              "hasDiagram": false,
+              "diagram": null
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "The diagram below shows a cell organelle.",
+              "marks": null,
+              "topic": "Cell Organelles",
+              "pageNumber": 3,
+              "hasSubQuestions": true,
+              "subQuestions": [
+                {
+                  "part": "a",
+                  "text": "Identify the organelle.",
+                  "marks": 1,
+                  "hasSubParts": false,
+                  "subParts": null
+                },
+                {
+                  "part": "b",
+                  "text": "State the function of parts labeled X and Y.",
+                  "marks": 2,
+                  "hasSubParts": true,
+                  "subParts": [
+                    {
+                      "part": "i",
+                      "text": "X",
+                      "marks": 1
+                    },
+                    {
+                      "part": "ii",
+                      "text": "Y",
+                      "marks": 1
+                    }
+                  ]
+                }
+              ],
+              "hasDiagram": true,
+              "diagram": {
+                "type": "labeled_diagram",
+                "description": "A mitochondrion in longitudinal section showing the outer membrane, inner membrane with cristae, and matrix. Parts labeled: X points to the cristae (inner membrane folds), Y points to the matrix (inner compartment).",
+                "pageNumber": 3,
+                "position": "top-center",
+                "labels": ["X", "Y"],
+                "sizeEstimate": "medium"
+              }
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "State three characteristics of DNA that make it suitable for its function.",
+              "marks": 3,
+              "topic": "Genetics",
+              "pageNumber": 3,
+              "hasSubQuestions": false,
+              "subQuestions": null,
+              "hasDiagram": false,
+              "diagram": null
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "The table below shows the composition of blood entering and leaving the kidney in a healthy person.",
+              "marks": null,
+              "topic": "Excretion",
+              "pageNumber": 4,
+              "hasSubQuestions": true,
+              "subQuestions": [
+                {
+                  "part": "a",
+                  "text": "Account for the difference in the concentration of urea.",
+                  "marks": 2,
+                  "hasSubParts": false,
+                  "subParts": null
+                },
+                {
+                  "part": "b",
+                  "text": "Explain why the concentration of glucose remains constant.",
+                  "marks": 2,
+                  "hasSubParts": false,
+                  "subParts": null
+                }
+              ],
+              "hasDiagram": true,
+              "diagram": {
+                "type": "table",
+                "description": "A table with 3 columns and 4 rows. Column headers: Substance, Blood Entering Kidney (%), Blood Leaving Kidney (%). Row data: Glucose (0.10, 0.10), Urea (0.03, 0.01), Proteins (8.00, 8.00).",
+                "pageNumber": 4,
+                "position": "top-center",
+                "labels": [],
+                "sizeEstimate": "medium"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Chemistry": {
+      "papers": {
+        "Paper 1": {
+          "totalPages": 12,
+          "totalQuestions": 8,
+          "totalMarks": 80,
+          "instructions": [
+            "Answer ALL questions.",
+            "KNEC Mathematical tables and silent non-programmable scientific calculators may be used.",
+            "All working MUST be clearly shown where necessary."
+          ],
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "Study the set-up below and answer the questions that follow.",
+              "marks": null,
+              "topic": "Experimental Chemistry",
+              "pageNumber": 2,
+              "hasSubQuestions": true,
+              "subQuestions": [
+                {
+                  "part": "a",
+                  "text": "State the observations made in the combustion tube.",
+                  "marks": 1,
+                  "hasSubParts": false,
+                  "subParts": null
+                },
+                {
+                  "part": "b",
+                  "text": "Write an equation for the reaction that takes place in the combustion tube.",
+                  "marks": 1,
+                  "hasSubParts": false,
+                  "subParts": null
+                },
+                {
+                  "part": "c",
+                  "text": "Identify the substance collected in the U-tube.",
+                  "marks": 1,
+                  "hasSubParts": false,
+                  "subParts": null
+                }
+              ],
+              "hasDiagram": true,
+              "diagram": {
+                "type": "apparatus_setup",
+                "description": "Laboratory apparatus showing a combustion tube connected to a U-tube. The combustion tube contains copper(II) oxide and is being heated. Hydrogen gas flows through the apparatus from left to right. The U-tube is surrounded by ice-water mixture for cooling. Labels: Hydrogen gas inlet, Combustion tube (with heat arrow), Copper(II) oxide, U-tube, Ice-water mixture.",
+                "pageNumber": 2,
+                "position": "top-center",
+                "labels": ["Hydrogen gas", "Combustion tube", "Copper(II) oxide", "U-tube", "Ice-water mixture"],
+                "sizeEstimate": "large"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
