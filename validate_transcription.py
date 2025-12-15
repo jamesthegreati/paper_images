@@ -17,7 +17,14 @@ import json
 from pathlib import Path
 
 def load_json(filepath):
-    """Load and parse a JSON file."""
+    """Load and parse a JSON file.
+    
+    Args:
+        filepath (str): Path to the JSON file to load
+        
+    Returns:
+        dict: Parsed JSON data, or None if file not found or invalid
+    """
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -30,7 +37,14 @@ def load_json(filepath):
         return None
 
 def validate_schema(data):
-    """Validate against JSON schema if jsonschema is available."""
+    """Validate against JSON schema if jsonschema is available.
+    
+    Args:
+        data (dict): The transcription data to validate
+        
+    Returns:
+        bool: True if validation passed or was skipped, False if failed
+    """
     try:
         from jsonschema import validate, ValidationError
         
@@ -59,7 +73,17 @@ def validate_schema(data):
         return True
 
 def validate_structure(data):
-    """Validate the basic structure of the transcription."""
+    """Validate the basic structure of the transcription.
+    
+    Checks for required fields, verifies subject/paper/question structure,
+    validates mark totals, and ensures counts match stated values.
+    
+    Args:
+        data (dict): The transcription data to validate
+        
+    Returns:
+        bool: True if structure validation passed, False otherwise
+    """
     print("\n📋 Structure Validation:")
     errors = []
     warnings = []
@@ -144,7 +168,17 @@ def validate_structure(data):
     return True
 
 def check_diagrams(data):
-    """Check diagram descriptions and metadata."""
+    """Check diagram descriptions and metadata.
+    
+    Verifies that diagrams have descriptions and labels listed.
+    Reports statistics on total diagrams and any missing metadata.
+    
+    Args:
+        data (dict): The transcription data to check
+        
+    Returns:
+        bool: Always returns True (warnings only, not errors)
+    """
     print(f"\n🖼️  Diagram Check:")
     
     total_diagrams = 0
@@ -198,7 +232,14 @@ def check_diagrams(data):
     return True
 
 def main():
-    """Main validation function."""
+    """Main validation function.
+    
+    Loads the JSON file, runs all validation checks, and reports results.
+    
+    Exit codes:
+        0: Validation passed
+        1: Validation failed or file not found
+    """
     if len(sys.argv) != 2:
         print("Usage: python3 validate_transcription.py <json_file>")
         print("\nExample:")
