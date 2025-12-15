@@ -113,10 +113,25 @@ The repository includes a comprehensive AI transcription system. See [`TRANSCRIP
    - Save the generated JSON as `kcse_{{YEAR}}_complete.json`
    - Validate against the schema in [`schema.json`](schema.json)
 
+5. **Validate the Output**
+   ```bash
+   python3 validate_transcription.py kcse_2024_complete.json
+   ```
+   
+   The validator checks:
+   - JSON schema compliance
+   - Structure and required fields
+   - Mark totals match
+   - Diagram descriptions are present
+   - Question counts are correct
+
 **Files:**
 - [`TRANSCRIPTION_PROMPT.md`](TRANSCRIPTION_PROMPT.md) - Complete AI prompt template
 - [`schema.json`](schema.json) - JSON Schema for validation
 - [`example_output.json`](example_output.json) - Example transcribed output
+- [`validate_transcription.py`](validate_transcription.py) - Python validator script
+- [`prepare_transcription.sh`](prepare_transcription.sh) - Helper script for preparing transcriptions
+- [`QUICK_REFERENCE.md`](QUICK_REFERENCE.md) - Quick start guide
 
 ### 🎯 Output Structure
 

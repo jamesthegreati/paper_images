@@ -71,6 +71,23 @@ Open `TRANSCRIPTION_PROMPT.md` and replace:
 
 After getting your JSON output:
 
+### Using the Python Validator (Recommended)
+
+```bash
+# Run the validator
+python3 validate_transcription.py kcse_2024_complete.json
+```
+
+The validator checks:
+- ✅ JSON schema compliance
+- ✅ Structure and required fields
+- ✅ Mark totals match stated values
+- ✅ Diagram descriptions are complete
+- ✅ Question counts are accurate
+- ✅ All metadata is present
+
+### Manual Validation (Alternative)
+
 ```bash
 # Install a JSON validator (if you have Node.js)
 npm install -g ajv-cli
@@ -107,8 +124,8 @@ Use this convention:
 # 4. Save output
 # Save as kcse_2017_complete.json
 
-# 5. Validate (optional)
-# Use online validator or ajv-cli
+# 5. Validate
+python3 validate_transcription.py kcse_2017_complete.json
 ```
 
 ## Schema Overview
